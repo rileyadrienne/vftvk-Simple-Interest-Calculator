@@ -1,46 +1,65 @@
-body {background-color:black; font-family:arial; color: white}
-h1{color:grey;
-    font-family:verdana;
-    text-align: center;
-    
-}
-.maindiv {
-    background-color:white;
-    color:black;
-    width:475px;
-    border-radius:25px;
-    margin:auto;
-    padding: 20px; 
-}
+<!DOCTYPE html>
+<title> Simple Interest Calculator </title>
+    <head>
+    <script src="Script.js"></script>
+    <link rel="stylesheet" href="Style.css">
+    </head>
+    <body>
+        <div class="maindiv">
+        <h1>Simple Interest Calculator</h1>
+            
+            <div class="inputfields">  
+               <table id="input">
+                 <tbod>
+            <tr>
+                <td>  <label> Amount </label> </td>
+                <td> <input type="number"  id="principal"> </td>
+                </tr>
+                         
+    <tr>
+        <td><label> Interest Rate </label> </td><td><input type="range" id="rate" min="1" max="20" value="10.25" onchange="updateRate()"> 
+            <span id="rate_val"> 10.25% </span> </td>
+            
+            </tr>
+          <tr> <td><label>No. of Years</label></td><td> <select id="years"> 
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option> 
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            </select></td> 
+                     </tr>  
+       
+    <tr>
+           <td> <button onclick="compute()">Compute Interest</button> </td>         
+                     </tr>
+            </tbod>
+              </table>
+             <table id="output">
+                 <tbod>
+                   <tr>
+           <td><span id="result"> 
 
-label
-{
-    display: table-column;
-    float: left;
-}
-input{
-    display: table-column;
-    float:inherit;
-    text-align: center;
-    
-}
-#input{
-    
-margin-right:auto;
-    margin-left:85px;
-   
-}
-td{
-    padding: 2.75px;
-}
-#output{
-    margin-left: 85px;
-   
-  
-}
-#principal{
-    text-align: left;
-}
-footer{
-    margin-top:-12px
-}
+            </span></td> 
+                       <td>
+                       </td>
+            
+               </tr>
+                 </tbod>
+                </table>
+            
+            </div>    
+              
+                <footer> 
+                <p>  &#169; This Calculator belongs to Riley Ostrander </p>
+        </footer>
+            </div>
+       
+            
+    </body>
+</html>
