@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <title> Simple Interest Calculator </title>
     <head>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <script src="Script.js"></script>
+    <link rel="stylesheet" href="Style.css">
     </head>
     <body>
         <div class="maindiv">
         <h1>Simple Interest Calculator</h1>
-
-        Amount <input type="number"  id="principal">  
             
-            <br/>
+            <div class="inputfields">  
+               <table id="input">
+                 <tbod>
+            <tr>
+                <td>  <label> Amount </label> </td>
+                <td> <input type="number"  id="principal"> </td>
+                </tr>
+                         
+    <tr>
+        <td><label> Interest Rate </label> </td><td><input type="range" id="rate" min="1" max="20" value="10.25" onchange="updateRate()"> 
+            <span id="rate_val"> 10.25% </span> </td>
             
-        Rate <input type="range" id="rate" min="1" max="20" value="10.25" onchange="updateRate()"> 
-            <span id="rate_val"> 10.25% </span> 
-            
-            <br/>
-            
-        No. of Years <select id="years"> 
+            </tr>
+          <tr> <td><label>No. of Years</label></td><td> <select id="years"> 
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -28,17 +32,34 @@
             <option value="8">8</option>
             <option value="9">9</option>
             <option value="10">10</option>
-            </select>
+            </select></td> 
+                     </tr>  
+       
+    <tr>
+           <td> <button onclick="compute()">Compute Interest</button> </td>         
+                     </tr>
+            </tbod>
+              </table>
+             <table id="output">
+                 <tbod>
+                   <tr>
+           <td><span id="result"> 
+
+            </span></td> 
+                       <td>
+                       </td>
             
-            <br/>
-            <button onclick="compute()">Compute Interest</button>
-                   <br/>
-            <span id="result"> 
-            </span>
+               </tr>
+                 </tbod>
+                </table>
+            
+            </div>    
+              
                 <footer> 
                 <p>  &#169; This Calculator belongs to Riley Ostrander </p>
         </footer>
-        </div>
+            </div>
+       
             
     </body>
 </html>
